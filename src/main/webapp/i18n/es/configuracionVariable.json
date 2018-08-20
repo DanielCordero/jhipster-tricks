@@ -1,0 +1,26 @@
+
+{
+    "aplicacionApp": {
+        "configuracionVariable" : {
+            "home": {
+                "title": "Configuracion Variables",
+                "createLabel": "Crear nuevo Configuracion Variable",
+                "createOrEditLabel": "Crear o editar Configuracion Variable"
+            },
+            "created": "Un nuevo Configuracion Variable ha sido creado con el identificador {{ param }}",
+            "updated": "Un Configuracion Variable ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Configuracion Variable ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Configuracion Variable {{ id }}?"
+            },
+            "detail": {
+                "title": "Configuracion Variable"
+            },
+            "fecha": "Fecha",
+            "veces": "Veces",
+            "otrocampo": "Otrocampo",
+            "campoadicional": "Campoadicional",
+            "variable": "Variable"
+        }
+    }
+}

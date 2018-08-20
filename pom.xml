@@ -526,10 +526,10 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver>com.mysql.jdbc.Driver</driver>
-                    <url>jdbc:mysql://localhost:3306/aplicacion</url>
-                    <defaultSchemaName>aplicacion</defaultSchemaName>
-                    <username>root</username>
-                    <password></password>
+                    <url>jdbc:mysql://192.168.1.245:3306/jhipster</url>
+                    <defaultSchemaName>jhipster</defaultSchemaName>
+                    <username>jhipster</username>
+                    <password>jhipster</password>
                     <referenceUrl>hibernate:spring:ml.danielcordero.tests.aplicacion.domain?dialect=org.hibernate.dialect.MySQL5InnoDBDialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>

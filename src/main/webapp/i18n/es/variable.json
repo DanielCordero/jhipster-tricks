@@ -1,0 +1,26 @@
+
+{
+    "aplicacionApp": {
+        "variable" : {
+            "home": {
+                "title": "Variables",
+                "createLabel": "Crear nuevo Variable",
+                "createOrEditLabel": "Crear o editar Variable"
+            },
+            "created": "Un nuevo Variable ha sido creado con el identificador {{ param }}",
+            "updated": "Un Variable ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Variable ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Variable {{ id }}?"
+            },
+            "detail": {
+                "title": "Variable"
+            },
+            "nombre": "Nombre",
+            "descripcion": "Descripcion",
+            "campo": "Campo",
+            "cuak": "Cuak",
+            "configuracionVariable": "Configuracion Variable"
+        }
+    }
+}

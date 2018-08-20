@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="configuracionVariable">
+            <h2>
+                <span jhiTranslate="aplicacionApp.configuracionVariable.detail.title">Configuracion Variable</span> {{configuracionVariable.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt>
+                    <span jhiTranslate="aplicacionApp.configuracionVariable.fecha">Fecha</span>
+                </dt>
+                <dd>
+                    <span>{{configuracionVariable.fecha}}</span>
+                </dd>
+                <dt>
+                    <span jhiTranslate="aplicacionApp.configuracionVariable.veces">Veces</span>
+                </dt>
+                <dd>
+                    <span>{{configuracionVariable.veces}}</span>
+                </dd>
+                <dt>
+                    <span jhiTranslate="aplicacionApp.configuracionVariable.otrocampo">Otrocampo</span>
+                </dt>
+                <dd>
+                    <span>{{configuracionVariable.otrocampo}}</span>
+                </dd>
+                <dt>
+                    <span jhiTranslate="aplicacionApp.configuracionVariable.campoadicional">Campoadicional</span>
+                </dt>
+                <dd>
+                    <span>{{configuracionVariable.campoadicional}}</span>
+                </dd>
+                <dt>
+                    <span jhiTranslate="aplicacionApp.configuracionVariable.variable">Variable</span>
+                </dt>
+                <dd>
+                    <div *ngIf="configuracionVariable.variableId">
+                        <a [routerLink]="['/variable-front', configuracionVariable.variableId, 'view']">{{ nombreVariable(configuracionVariable.variableId) }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit" (click)="previousState()" class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;
+                <span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button" [routerLink]="['/configuracion-variable-front', configuracionVariable.id, 'edit']" class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;
+                <span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-configuracion-variable-front-heading" jhiTranslate="aplicacionApp.configuracionVariable.home.createOrEditLabel">Create or edit a Configuracion Variable</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!configuracionVariable.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" [(ngModel)]="configuracionVariable.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="aplicacionApp.configuracionVariable.fecha" for="field_fecha">Fecha</label>
+                    <div class="input-group">
+                        <input id="field_fecha" type="text" class="form-control" name="fecha" ngbDatepicker #fechaDp="ngbDatepicker" [(ngModel)]="configuracionVariable.fecha"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fechaDp.toggle()">
+                                <fa-icon [icon]="'calendar-alt'"></fa-icon>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="aplicacionApp.configuracionVariable.veces" for="field_veces">Veces</label>
+                    <input type="number" class="form-control" name="veces" id="field_veces" [(ngModel)]="configuracionVariable.veces" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="aplicacionApp.configuracionVariable.otrocampo" for="field_otrocampo">Otrocampo</label>
+                    <input type="number" class="form-control" name="otrocampo" id="field_otrocampo" [(ngModel)]="configuracionVariable.otrocampo"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="aplicacionApp.configuracionVariable.campoadicional" for="field_campoadicional">Campoadicional</label>
+                    <input type="text" class="form-control" name="campoadicional" id="field_campoadicional" [(ngModel)]="configuracionVariable.campoadicional"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="aplicacionApp.configuracionVariable.variable" for="field_variable">Variable</label>
+                    <select class="form-control" id="field_variable" name="variable" [(ngModel)]="configuracionVariable.variableId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="variableOption.id" *ngFor="let variableOption of variables; trackBy: trackVariableById">{{variableOption.nombre}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;
+                    <span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;
+                    <span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

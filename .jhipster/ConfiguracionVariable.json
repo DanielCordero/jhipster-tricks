@@ -1,0 +1,39 @@
+{
+    "name": "ConfiguracionVariable",
+    "fields": [
+        {
+            "fieldName": "fecha",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "veces",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "otrocampo",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "campoadicional",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "variable",
+            "otherEntityName": "variable",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180818224230",
+    "entityTableName": "configuracion_variable",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "Front"
+}

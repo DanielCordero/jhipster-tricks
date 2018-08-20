@@ -1,0 +1,48 @@
+{
+    "name": "Variable",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "campo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cuak",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "configuracionVariable",
+            "otherEntityName": "configuracionVariable",
+            "otherEntityRelationshipName": "variable"
+        }
+    ],
+    "changelogDate": "20180818224229",
+    "entityTableName": "variable",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "Front"
+}

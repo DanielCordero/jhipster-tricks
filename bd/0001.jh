@@ -1,0 +1,27 @@
+entity Variable {
+	nombre String required
+    descripcion String required
+    campo String
+    cuak Integer required
+}
+
+entity ConfiguracionVariable {
+	fecha LocalDate
+    veces Integer
+    otrocampo Integer
+    campoadicional String
+}
+
+relationship OneToMany {
+	Variable to ConfiguracionVariable
+}
+
+// Set pagination options
+paginate Variable with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Variable
+// Set an angular suffix
+angularSuffix * with Front

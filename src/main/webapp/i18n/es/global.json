@@ -7,6 +7,8 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entidades",
+                "variableFront": "Variable",
+                "configuracionVariableFront": "Configuracion Variable",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -98,7 +100,8 @@
             "edit": "Editar",
             "open": "Open",
             "save": "Guardar",
-            "view": "Vista"
+            "view": "Vista",
+            "cuakkkk": "CUAKKKK"
         },
         "detail": {
             "field": "Campo",
@@ -131,5 +134,5 @@
         "idexists": "A new {{entityName}} cannot already have an ID",
         "idnull": "Invalid ID"
     },
-    "footer": "pie de página"
+    "footer": "2018 Daniel Cordero"
 }
